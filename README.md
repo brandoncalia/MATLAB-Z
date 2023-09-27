@@ -1,9 +1,6 @@
 # MATLAB-Z
 An agent-based model in MATLAB that simulates a theoretical zombie apocalypse (or other disease outbreak)
 
-Brandon Calia
-
-
 
 # Introduction
 The idea of a zombie apocalypse has been explored countless times in video games, movies, and TV shows. It’s a pop culture phenomenon with endless possibilities, all centered around the idea of an infectious disease turning people into undead, infectious, and hostile beings, hungry to infect whoever they see. My model attempts to provide a very simplistic parameterization and visualization of how a population would survive given an outbreak of a zombie-like fungus. Unsurprisingly, many people have tried to delve into the idea of modeling such a pandemic. Most models are simply derivatives of already advanced disease models, with lots using a variation of the SIR model we discussed in class. One such famous model was developed by Alex Alemi, a statistician from Cornell who built an interactive model using previously developed disease models. He adds two more specific variables, namely those representing the “bite to kill ratio” and the time for a zombie to walk one mile. 
