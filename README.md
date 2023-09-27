@@ -3,6 +3,8 @@ An agent-based model in MATLAB that simulates a theoretical zombie apocalypse (o
 
 Brandon Calia
 
+
+
 # Introduction
 The idea of a zombie apocalypse has been explored countless times in video games, movies, and TV shows. It’s a pop culture phenomenon with endless possibilities, all centered around the idea of an infectious disease turning people into undead, infectious, and hostile beings, hungry to infect whoever they see. My model attempts to provide a very simplistic parameterization and visualization of how a population would survive given an outbreak of a zombie-like fungus. Unsurprisingly, many people have tried to delve into the idea of modeling such a pandemic. Most models are simply derivatives of already advanced disease models, with lots using a variation of the SIR model we discussed in class. One such famous model was developed by Alex Alemi, a statistician from Cornell who built an interactive model using previously developed disease models. He adds two more specific variables, namely those representing the “bite to kill ratio” and the time for a zombie to walk one mile. 
 
@@ -19,7 +21,14 @@ Next, we must check for human-human interactions. However, there are other facto
 # Results
 There are three main results that stick out in this model. Firstly, the described setup allows for a very wide range of possibilities. Many times, humans are able to actually kill the very first zombie agent that spawns. Other times, zombies overtake 40% of the domain’s population rapidly. This result specifically is interesting. See below how quickly zombies can take over a large portion of the city population (approximately 15 timesteps). 
 
+<img width="450" alt="zombies1" src="https://github.com/brandoncalia/MATLAB-Z/assets/41372799/29e88c6f-6909-4c17-8014-cb9a40a5c975">
+
+
 Two important things to track in this simulation are the way average human formidability and average human hostility change over time. Interesting enough, both increase as time continues. The increase of f with time is extremely logical - it’s simply survival of the fittest. f essentially dictates an agent’s likelihood to survive a hostile interaction, so it makes sense that weaker agents would die and stronger agents would survive. The increase in average hostility over time was very intriguing, however. It isn’t illogical, but such a clear increase over time did surprise me, since in no way does hostility dictate whether or not an agent survives an interaction. That being said, it does dictate whether or not a human attacks another human. It does follow (based on the behaviors in this model) that a higher likelihood of being the attacker and not the attacked will lead to generally greater survival odds within the realm of human-human interactions. See below both variables changing with time: 
+
+<img width="400" alt="zombie2" src="https://github.com/brandoncalia/MATLAB-Z/assets/41372799/b0d289eb-1f18-4de7-8625-22802726231b">
+
+
 
 The apocalypse is a very complex phenomena that is difficult to model the way we see plots play out in movies. In doing this project, I learned an efficient way to simplify a complex procedure into a more basic set of interactions and rules. I was also glad to see results confirming that my choice of update rules was not unfounded, with a clear survival of the fittest trend and a visualization plot that doesn’t yield unexpected or impossible scenarios. One thing I think the model could benefit from is more realistic patterns of agent grouping. In a real apocalypse, it makes sense that people would travel in packs. Although it is somewhat artificially created through the fact that not every human agent is hostile towards every other human agent, this behavior is generally lacking. A more major thing I would like to add to this project to improve it would be the encoding of a cure. Rather, some possibility of a cure being found in a given timeframe, with then separate rules to dictate how the cure gets distributed. These two additions could make for an even more realistic, but still simplified model of the zombie apocalypse. 
 
